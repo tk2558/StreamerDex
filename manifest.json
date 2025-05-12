@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "StreamerDex",
+    "description": "A Chrome extension to quickly check if a Youtube Streamer is Live and quickly going to their channel",
+    "version": "1.0",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "/assets/controller.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "/assets/controller.png",
+      "48": "/assets/controller.png",
+      "128": "/assets/controller.png"
+    }
+  }
+  

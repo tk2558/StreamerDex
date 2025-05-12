@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDraw Paste</title>
+    <link rel="stylesheet" href="popup.css">
+    <script defer src="popup.js" type="module"></script>
+</head>
+<body>
+    <div class="popup-container">
+        <h1>
+            <img src="../assets/controller.png" alt="Icon" class="project-icon">
+            StreamerDex
+        </h1>
+        <div class ="section-container">
+            <div class="yt-section" id="yt-section">
+                <div class="section-header">
+                    <h2>
+                        <img src="../assets/youtube_bw.png" alt="Icon" class="header-icon">
+                        <span class="section-title" id ="youtube-title">YouTube</span>
+                        <button class="collapse-btn" id ="YT-collapse">▼</button>
+                    </h2>
+                </div>
+                <div class="section-content" id="yt-content">
+                    <div class="yt-end"></div>
+                </div>
+            </div>
+            <div class="tw-section" id="tw-section">
+                <div class="section-header">
+                    <h2>
+                        <img src="../assets/twitch_bw.png" alt="Icon" class="header-icon">
+                        <span class="section-title" id ="twitch-title">Twitch</span>
+                        <button class="collapse-btn" id ="TW-collapse">▼</button>
+                    </h2>
+                </div>
+                <div class="section-content" id="tw-content">
+                    <div class="tw-end"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+        <div class="footer-buttons">
+            <button class="add-streamer-btn">Add Streamer</button>
+        </div>
+    </div>
+    </div>
+<script src="../config.js"></script>
+</body>
+</html>

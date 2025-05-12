@@ -1,0 +1,269 @@
+/* General Styles */
+:root {
+  --youtube-red: #ff0000ff;
+  --twitch-purple: #8956fbff;
+  --background: #162521ff;
+  --accent: #9eefe5ff;
+  --gray: #edededff;
+  --font: #0C0C0C;
+}
+
+body {
+  width: 375px;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  padding: 10px;
+}
+
+/* Header */
+.header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--font);
+}
+
+h1 {
+  background-color: var(--accent);
+  color: var(--font);
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+
+.project-icon {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 15px;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  position: relative;
+}
+
+.header-icon {
+  max-width: 28px;
+  max-height: 28px;
+  vertical-align: middle; 
+  margin-right: 10px;
+}
+
+.collapse-btn {
+  margin-left: auto; 
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2.5px;  
+  width: 24px; /* Explicit width */
+  height: 24px; /* Explicit height */
+  line-height: 1; /* Prevent extra spacing */
+  background-color: var(--background);
+}
+
+/* Section */
+.section-container {
+  margin: 0;
+}
+
+.yt-section {
+  background-color: var(--youtube-red);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.tw-section {
+  background-color: var(--twitch-purple);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.section-title {
+  flex-grow: 1;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  max-width: 240px; 
+  text-overflow: ellipsis; /* Adds ".." if text is too long */
+  overflow-x: hidden;
+  color: var(--font);
+}
+
+/* Section Content */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Entry */
+.entry {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray);
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+.entry-name {
+  flex: 0 0 235px; 
+  max-width: 235px; 
+  text-overflow: ellipsis; 
+  overflow: hidden;
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+
+.entry-icon, .status-icon {
+  max-width: 20px;
+  max-height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button, .add-entry-btn, .add-entry-btn-long {
+  background-color: #d69e2e;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.enter-btn {
+  background-color: #85d685;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  width: 65px;
+  margin-right: 5px;
+}
+
+.delete-btn, .confirm-btn {
+  background-color: var(--gray);
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: var(--font);
+  font-weight: bold;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #595959;
+}
+
+.divider {
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  margin: 10px 0;
+  width: 100%;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.add-streamer-btn {
+  height: 32px;
+  font-size: 14px;
+  flex: 0 0 120px;
+  background-color: var(--accent);
+  color: var(--font);
+  cursor: pointer;
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.revolver-spin {
+  animation: spin360 1s ease-in-out;
+}
+
+@keyframes flip360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.button-flip {
+  animation: flip360 1.25s ease-in-out;
+}
+
+@keyframes roll-across {
+  0% {
+      transform: translateX(0) rotate(0deg);
+  }
+  60% {
+      transform: translateX(100vw) rotate(360deg);
+  }
+  61% {
+      transform: translateX(-100vw) rotate(360deg);
+  }
+  100% {
+      transform: translateX(0) rotate(0deg);
+  }
+}
+
+.rolling {
+  animation: roll-across 3s linear forwards;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+

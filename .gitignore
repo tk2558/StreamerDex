@@ -1,0 +1,17 @@
+# Ignore sensitive config
+config.js
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore node modules (if you use npm)
+node_modules/
+
+# Ignore environment files
+.env
+.env.local

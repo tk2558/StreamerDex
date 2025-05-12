@@ -1,0 +1,127 @@
+/* QuickDraw Colors */
+:root {
+    --youtube-red: #ff0000ff;
+    --twitch-purple: #8956fbff;
+    --background: #162521ff;
+    --accent: #9eefe5ff;
+    --gray: #edededff;
+    --font: #0C0C0C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;  
+}
+
+/* Popup Container */
+.popup-container {
+    background-color: var(--accent);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.header-icon { 
+    max-width: 32px;
+    max-height: 32px;
+    vertical-align: middle;   
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.name-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.name-section label {
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+.name-section input {
+    flex-grow: 1;
+    padding: 6px;
+    border: 2px solid var(--font);
+    border-radius: 5px;
+    background: var(--gray);
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background: #fa5353;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 10px; 
+}
+
+.save-btn {
+    background: #85d685;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 10px; 
+}
+
+.cancel-btn:hover, .save-btn:hover  {
+    background: #595959;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+  
