@@ -134,6 +134,7 @@ async function loadEntries() { // Load stored sections
             for (const entry of result.entries) {
                 await restoreEntry(entry);
             }
+            saveEntries();
             getLiveStatus();
         }
     });
