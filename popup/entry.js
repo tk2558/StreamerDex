@@ -121,9 +121,7 @@ function saveEntries() { // Save sections to Chrome Storage
             platform: entry.dataset.platform,
         };
     });
-    chrome.storage.local.set({ entries }, () => {
-        //console.log("Entry saved: ", entries);
-    });
+    chrome.storage.local.set({ entries: entries });
 }
 
 async function loadEntries() { // Load stored sections 
